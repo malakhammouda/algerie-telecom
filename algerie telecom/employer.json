@@ -1,0 +1,22 @@
+[
+    {    "id":1,
+        "username":"hammouda_malak",
+        "role":"CIL"
+    },
+    {   "id":2,
+        "username":"ouaaz_saara",
+        "role":"CMP"
+    },
+    {   "id":3,
+        "username":"chadi_zineb",
+        "role":"reaseaux_urbain"
+    },
+    {     "id":4,
+        "username":"hamdi_hammadi",
+        "role":"DCMP"
+    },
+    {    "id":5,
+        "username":"mohammed",
+        "role":"CIL"
+    }
+]

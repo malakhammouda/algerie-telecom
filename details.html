@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>memoir</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://www.algerietelecom.dz/assets/front/img/logo.svg" alt="">
+           </div>
+           <ul>
+            
+              <div class="profile">
+               <a href="#"><i class="fa-regular fa-user" onclick="toggleMenu()"></i></a> 
+               <div class="sub-menu-wrap" id="subMenu">
+                   <div class="sub-menu">
+                       <div class="user-inform">
+                          <a href="#"><i class="fa-regular fa-user"></i></a>
+                          <h2>Nom d'utilisateur</h2>
+                       </div>
+                       <hr>
+                          <a href="profile.html" class="sub-menu-link">
+                           <img src="favicon-32x32.png">
+                           <p> Profile</p>
+                           <span>></span>
+                          </a> 
+                          <a href="#" class="sub-menu-link">
+                           <img src="favicon-32x32.png" >
+                           <p> Se deconnecter</p>
+                           <span>></span>
+                          </a> 
+                    </div>
+               </div>
+              </div>
+           </ul>   
+    </nav>
+    <aside  class="sidebar">
+         
+             
+        <header>
+           <div class="profilee">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqafzhnwwYzuOTjTlaYMeQ7hxQLy_Wq8dnQg&s" alt="">
+                 <h5>Nom d'utilisateur</h5>
+           </div>
+          
+        </header>
+           <ul>
+              <li><a href="dashboard.html"><i class="fas fa-qrcode"></i>Tableau de bord</a></li>
+              <li><a href="C:\Users\ACER\algerie telecom\index.html"><i class="fa-regular fa-rectangle-list"></i>liste de projet</a></li>
+              <li><a href="C:\Users\ACER\algerie telecom\index5.html"><i class="fa-regular fa-user"></i> liste d'employer</a></li>
+              <li class="deconnecter"><a href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i>se deconnecter</a> </li>
+           </ul>
+              
+           
+       </aside>
+     <main class="det">
+         <h1>Details Du Projet</h1>
+        <br>
+        <br>
+        <div class="details">
+            <div class="details-projet">
+                <div class="top">
+                <h3>Projet</h3>
+                <form class="display-horizontal">
+                    <div class="display-vertical">
+                    <label>nom</label>
+                    <input type="text" value="nom">
+                    <label>surveillant</label>
+                    <input type="text" value="surveillant">
+                    <label>entreuprise</label>
+                    <input type="text" value="entreuprise">
+                    </div>
+                    <div class="display-vertical">
+                    <label>date-debut</label>
+                    <input type="date" value="entreuprise">
+                    <label>date-fin</label>
+                    <input type="date" value="entreuprise">
+                    <label>delais</label>
+                    <input type="text" value="3 mois">
+                    </div>
+                </form>
+              <button type="submit" class="btn-projet">Modifier</button>
+            </div>
+            </div>
+
+
+<div class="details-dossier">
+                <div class="top">
+                <h3>Dossier</h3>
+                <form>
+                        <label>nom</label>
+                        <div class="input-dos">
+                        <input type="text" value="nom">
+                        </div>
+                        <label>PV de reception</label>
+                        <div class="radio">
+                        <input type="radio" required>oui
+                        <input type="radio" required>non
+                        </div>
+                        <label>Etat</label>
+                        <div class="select-dos">
+                        <select>
+                            <option>CMP</option>
+                            <option>CIL</option>
+                            <option>R.U</option>
+                            <option>SDFS</option>
+                            <option>DFC</option>
+                        </select>
+                        </div>
+                </form>
+                <button type="submit" class="btn-dossier">Modifier</button>
+            </div>
+            </div>
+
+        </div>
+        
+     </main>
+    
+        
+        <script>
+            let subMenu = document.getElementById("subMenu");
+function toggleMenu(){
+  subMenu.classList.toggle("open-menu");
+}
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>memoir</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://www.algerietelecom.dz/assets/front/img/logo.svg" alt="">
+           </div>
+           <ul>
+            
+              <div class="profile">
+               <a href="#"><i class="fa-regular fa-user" onclick="toggleMenu()"></i></a> 
+               <div class="sub-menu-wrap" id="subMenu">
+                   <div class="sub-menu">
+                       <div class="user-inform">
+                          <a href="#"><i class="fa-regular fa-user"></i></a>
+                          <h2>user user</h2>
+                       </div>
+                       <hr>
+                          <a href="profile.html" class="sub-menu-link">
+                           <img src="favicon-32x32.png">
+                           <p>view profile</p>
+                           <span>></span>
+                          </a> 
+                          <a href="#" class="sub-menu-link">
+                           <img src="favicon-32x32.png" >
+                           <p>deconnecter</p>
+                           <span>></span>
+                          </a> 
+                    </div>
+               </div>
+              </div>
+           </ul>   
+    </nav>
+    <aside  class="sidebar">
+         
+             
+        <header>
+           <div class="profilee">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqafzhnwwYzuOTjTlaYMeQ7hxQLy_Wq8dnQg&s" alt="">
+                 <h5>Nom d'utilisateur</h5>
+           </div>
+          
+        </header>
+           <ul>
+              <li><a href="dashboard.html"><i class="fas fa-qrcode"></i>Tableau de bord</a></li>
+              <li><a href="C:\Users\ACER\algerie telecom\index.html"><i class="fa-regular fa-rectangle-list"></i>Liste de projet</a></li>
+              <li><a href="C:\Users\ACER\algerie telecom\index5.html"><i class="fa-regular fa-user"></i> Liste d'employer</a></li>
+              <li class="deconnecter"><a href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i>Se deconnecter</a> </li>
+           </ul>
+              
+           
+       </aside>
+
+
+<main class="profiile">
+           <h1>Nom d'utilisateur</h1>
+            <br><br>
+            <div class="profile-info">
+                <div class="avatar">
+                    <div class="avatar-top">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqafzhnwwYzuOTjTlaYMeQ7hxQLy_Wq8dnQg&s" alt="User Avatar">
+                    <p>Nom d'utilisateur</p>
+                </div>
+                </div>
+                <div class="general-info">
+                    <h3>Information géneral</h3>
+                    <form class="display-horizontal">
+                    <div class="display-vertical">
+                    <div class="general-top">
+                    <label>Prenom</label>
+                    <input type="text" value="prenom">
+                    <label>Nom</label>
+                    <input type="text" value="nom">
+                    </div>
+                    </div>
+                    <div class="display-vertical">
+                    <label>Role</label>
+                    <input type="text" value="reseau-urbain">
+                    <label>DOT</label>
+                    <input type="text" value="bab sebt">
+                    </div>
+                    </form>
+                    <br>
+                </div>
+            </div>
+            <br><br>
+            <div class="security">
+                <h3>Securité</h3>
+                <form class="display-horizontal">
+                <div class="display-vertical">
+                <div class="general-top">
+                <label>Email</label>
+                <input type="email" value="address@email.com" disabled>
+                <label>Numero telephone</label>
+                <input type="text" value="+965 1234 5678" disabled>
+                </div>
+                </div>
+                <div class="display-vertical">
+                <label>Date de naissaince</label>
+                <input type="date" value="01/01/1990" disabled>
+                <label>Endroit</label>
+                <input type="text" value="Blida" disabled>
+                </div>
+                </form>
+            </div>
+            <div class="actions">
+                <button> Se deconnécter</button>
+            </div>
+    </main>
+        <script>
+            let subMenu = document.getElementById("subMenu");
+function toggleMenu(){
+  subMenu.classList.toggle("open-menu");
+}
+        </script>
+</body>
+</html>

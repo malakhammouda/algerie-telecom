@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style5.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <nav> 
+       <div class="logo">
+        <img src="https://www.algerietelecom.dz/assets/front/img/logo.svg" alt="">
+       </div>
+       <ul>
+        
+          <div class="profile">
+           <a href="C:\Users\ACER\algerie telecom\profile.html"><i class="fa-regular fa-user"></i></a> 
+          </div>
+       </ul>
+      
+       
+    </nav>
+       
+    <aside  class="sidebar">
+        
+            
+     <header>
+        <div class="profilee">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqafzhnwwYzuOTjTlaYMeQ7hxQLy_Wq8dnQg&s" alt="">
+              <h5>user name</h5>
+        </div>
+       
+     </header>
+        <ul>
+                    <li><a href="C:\Users\ACER\algerie telecom\index3.html"><i class="fas fa-qrcode"></i>Tableau de bord</a></li>
+                    <li><a href="C:\Users\ACER\algerie telecom\index.html"><i class="fa-regular fa-rectangle-list"></i>Liste de projet</a></li>
+                   
+                    <li><a href="C:\Users\ACER\algerie telecom\index5.html"><i class="fa-regular fa-user"></i> Liste d'employer</a></li>
+                    <li class="deconnecter"><a href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i>Se deconnecter</a> </li>
+                    
+       </ul>
+           
+        
+    </aside>
+    <main>
+        <div class="table-container">
+      <h1>  Liste des employers</h1>
+
+      <input type="text" id="searchInput" placeholder="Search employers...">
+     
+      <button class="BUTTON" id="addRowBtn">Ajouter employer</button>
+    <table id="dynamicTable">
+        <thead>
+            <tr>
+                <th>  </span></th>
+                <th> Employer<span class="icon-arrow"></span></th>
+                <th> Role <span class="icon-arrow"></span></th>
+                <th> <span class="icon-arrow"></span></th>
+                
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Table rows will be dynamically added here -->
+           
+           
+              
+           
+           
+
+        </tbody>
+    </table>
+
+    <div id="popupForm" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <h2>  <span>|</span>Ajouter employer</h2>
+            <form id="addRowForm" >
+                     
+                <div class="input-box">
+                    <label > Nom d'utilisateur</label>
+                    <input type="text" id="username" placeholder="username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <label > Mot de passe</label>
+                    <input type="password"  id="password" placeholder="password" required>
+                    <i class='bx bxs-lock'></i>
+                </div>
+
+                <div class="input-box">
+                    <label > Role</label>
+                    <select name="role" id="role" required>
+                       
+                        <option value="surveillant">CMP</option>
+                        <option value="cil">CIL</option>
+                        <option value="DFC">RESEAU URBAN</option>
+                        <option value="SDFS">SDFS</option>
+                        <option value="reseau-urban">DFC</option>
+                        
+                    </select>
+                    <i class='bx bx-street-view'></i>
+                </div> 
+
+
+
+
+
+
+                <button type="submit" class="buttonn" >Ajouter</button>
+          
+            </form>
+        </div>
+    </div>
+</div>
+
+   
+
+    
+        
+   
+    </main>
+    <script src="script5.js"> </script>
+</body>
+</html>
+
+
+
+
+ 

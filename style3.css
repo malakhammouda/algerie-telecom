@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+/* Reset default styles for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove bullet points from lists */
+  text-decoration: none; /* Remove underlines from links */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 230px 1fr; 
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar main"
+      "sidebar footer";
+  }
+  
+  nav {
+    grid-area: navbar;
+    top:0 ;
+    position: sticky;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c5eaa68;
+    position: relative;
+    
+    height: 53px;
+  }
+
+  
+  
+  aside {
+    grid-area: sidebar;
+    top: 50px;
+    height: calc(100vh - 50px);
+    position: sticky;
+    align-self: start;
+  }
+  main{
+    grid-area: main;
+  }
+  @media(max-width :  800px){
+    body{
+        grid-template-columns: 1fr;
+    }
+    aside{
+        position: fixed;
+        width: 300px;
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+  }
+  
+ img{
+    width: 90px;
+    height: 90px;
+
+}
+i{
+    color: rgb(255, 255, 255);
+   font-size: 20px;
+}
+nav ul{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.sidebar {
+ 
+  
+    width: 180px;
+    height: 100%;
+    background: #2C5EAA;
+    transition: all 0.5s ease; /* Smooth transition for show/hide effect */
+    /* Note: 5s is very slow. 0.5s or 0.3s is usually preferred */
+  }
+  
+  .sidebar header {
+    font-size: 22px;
+    height: 130px;
+    
+    
+    text-align: center; /* Center the header text */
+    line-height: 70px; /* Vertically center the header text */
+    background: #2C5EAA; /* Slightly darker background for the header */
+    user-select: none;
+  }
+  .profilee img{
+      height: 60px;
+      width: 60px;
+     
+      border-radius: 50%;
+      border: 3px solid rgb(255, 255, 255);
+      text-align: center; /* Center the header text */
+      line-height: 70px;
+      margin-left: -10px;
+      margin-top: 17px;
+  }
+  .profilee h5{
+      margin-top: -45px;
+      color: rgb(147, 145, 145);
+      font-size: 13px;
+      font-weight: 100;
+      margin-left: -10px;
+  }
+  
+  
+  /* Sidebar navigation styles */
+  .sidebar ul a {
+      display: block; /* Make each link fill the width of the sidebar */
+      height: 100%; /* Make each link take up full available height */
+      width: 100%;
+      line-height: 60px; /* Vertically center text */
+      font-size: 11px;
+      color: white;
+      padding-left: 40px; /* Indent the text */
+      box-sizing: border-box; /* Include padding and border in width */
+      border-bottom: 1px solid rgba(189, 189, 189, 0.381); /* Add a separator line at the bottom */
+      border-top: 1px solid rgba(147, 147, 147, 0.381); /* Slightly visible top border */
+      transition: 0.4s; /* Smooth transition for hover effect */
+    }
+    
+    /* Hover effect for sidebar links */
+    .sidebar ul li:hover a {
+      padding-left: 50px;/* Increase indentation on hover */
+    }
+    .sidebar ul li:hover{
+      background-color: #20B471;
+    }
+    
+    /* Style for icons within sidebar links */
+    .sidebar ul a i {
+      margin-right: 16px; /* Space between icon and text */
+      font-size: 15px;
+      font-weight: 100;
+      color: #fff;
+    }
+    .deconnecter{
+        position: fixed;
+        margin-top: 160px;
+        height: 100%; /* Make each link take up full available height */
+        width: 180px
+        
+      }
+      .deconnecter:hover{
+        background-color: red;
+      }
+    h1{
+      color: #2C5EAA;
+      position:relative;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 20px;
+  
+    }
+    
+
+
+
+.main-container{
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 20px;
+    margin-top: 40px;
+}
+
+.main-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 15px;
+    margin: 20px 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d3;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+.card:first-child{
+    border-left: 7px solid #246dec;
+}
+.card:nth-child(2){
+    border-left: 7px solid #367952;
+}
+.card:nth-child(3){
+    border-left: 7px solid #f5b74f;
+}
+.card:nth-child(4){
+    border-left: 7px solid #ac0c0c;
+}
+
+.card-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-inner > p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.card span{
+    font-size: 19px;
+    margin-left: 50px;
+    margin-top: 12px;
+    font-weight: 300;
+}
+
+.charts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 80px;
+}
+.charts-card{
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    height: 400px;
+    width: 500px;
+    -webkit-column-break-inside: avoid;
+    border: 1px solid #d2d2d3;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+.chart-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+  /* ---------- MEDIA QUERIES ---------- */
+
+
+/* Medium <= 992px */
+@media screen and (max-width: 992px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        "header"
+        "main";
+    }
+  
+    #sidebar {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: inline;
+    }
+  
+    .sidebar-title > span {
+      display: inline;
+    }
+  }
+  
+  /* Small <= 768px */
+  @media screen and (max-width: 768px) {
+    .main-cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+  
+    .charts {
+      grid-template-columns: 1fr;
+      margin-top: 30px;
+    }
+  }
+  
+  /* Extra Small <= 576px */
+  @media screen and (max-width: 576px) {
+    .header-left {
+      display: none;
+    }
+  }
+
+
+
+ 

@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+/* Reset default styles for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove bullet points from lists */
+  text-decoration: none; /* Remove underlines from links */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 230px 1fr; 
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar main"
+      
+  }
+  
+  nav {
+    grid-area: navbar;
+    top:0 ;
+    position: sticky;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2c5eaa68;
+    position: relative;
+    
+    height: 53px;
+  }
+  
+  aside {
+    grid-area: sidebar;
+    top: 50px;
+    height: calc(100vh - 50px);
+    position: sticky;
+    align-self: start;
+  }
+  main{
+    grid-area: main;
+    width: 100%;
+  }
+  @media(max-width :  800px){
+    body{
+        grid-template-columns: 1fr;
+    }
+    aside{
+        position: fixed;
+        width: 300px;
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+  }
+  
+ img{
+    width: 90px;
+    height: 90px;
+
+}
+i{
+    color: rgb(255, 255, 255);
+   font-size: 20px;
+}
+nav ul{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+.sidebar {
+ 
+  
+    width: 180px;
+    height: 100%;
+    background: #2C5EAA;
+    transition: all 0.5s ease; /* Smooth transition for show/hide effect */
+    /* Note: 5s is very slow. 0.5s or 0.3s is usually preferred */
+  }
+  
+  .sidebar header {
+    font-size: 22px;
+    height: 130px;
+    
+    
+    text-align: center; /* Center the header text */
+    line-height: 70px; /* Vertically center the header text */
+    background: #2C5EAA; /* Slightly darker background for the header */
+    user-select: none;
+  }
+  .profilee img{
+      height: 60px;
+      width: 60px;
+     
+      border-radius: 50%;
+      border: 3px solid rgb(255, 255, 255);
+      text-align: center; /* Center the header text */
+      line-height: 70px;
+      margin-left: -10px;
+      margin-top: 17px;
+  }
+  .profilee h5{
+      margin-top: -45px;
+      color: rgb(147, 145, 145);
+      font-size: 13px;
+      font-weight: 100;
+      margin-left: -10px;
+  }
+  
+  
+  /* Sidebar navigation styles */
+  .sidebar ul a {
+      display: block; /* Make each link fill the width of the sidebar */
+      height: 100%; /* Make each link take up full available height */
+      width: 100%;
+      line-height: 60px; /* Vertically center text */
+      font-size: 11px;
+      color: white;
+      padding-left: 40px; /* Indent the text */
+      box-sizing: border-box; /* Include padding and border in width */
+      border-bottom: 1px solid rgba(189, 189, 189, 0.381); /* Add a separator line at the bottom */
+      border-top: 1px solid rgba(147, 147, 147, 0.381); /* Slightly visible top border */
+      transition: 0.4s; /* Smooth transition for hover effect */
+    }
+    .sidebar ul li{
+      height: 60px;
+    }
+  
+    .deconnecter{
+      position: fixed;
+      margin-top: 160px;
+      height: 100%; /* Make each link take up full available height */
+      width: 180px
+      
+    }
+    .deconnecter:hover{
+      background-color: red;
+    }
+    
+    /* Hover effect for sidebar links */
+    .sidebar ul li:hover a {
+      padding-left: 50px;/* Increase indentation on hover */
+    }
+    .sidebar ul li:hover{
+      background-color: #20B471;
+    }
+    
+    /* Style for icons within sidebar links */
+    .sidebar ul li i {
+      margin-right: 16px; /* Space between icon and text */
+      font-size: 15px;
+      font-weight: 100;
+      color: #fff;
+    }
+  
+
+
+
+
+  
+
+h1 {
+   margin-top: 50px;
+    color: #2C5EAA;
+    position:relative;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* Dynamic Table Styling */
+#dynamicTable {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 13px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  #dynamicTable thead tr {
+    background-color: #2C5EAA;
+    color: white;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+  
+  #dynamicTable th,
+  #dynamicTable td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  #dynamicTable tbody tr {
+    transition: all 0.3s ease;
+  }
+  
+  #dynamicTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  #dynamicTable tbody tr:last-of-type {
+    border-bottom: 0px solid #4b70e2;
+  }
+  
+  #dynamicTable tbody tr:hover {
+    background-color: #e6e9f5;
+    transform: scale(1.003);
+    box-shadow: 0 0 10px rgba(75, 112, 226, 0.1);
+  }
+  
+  /* Icon styles */
+  .icon-arrow {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  
+  .icon-arrow::after {
+    content: '↕';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    opacity: 0.6;
+  }
+  
+  th:hover .icon-arrow::after {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  
+  /* Strong tag customization */
+  #dynamicTable strong {
+    color: #147b4d;
+    font-weight: 600;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 767px) {
+    #dynamicTable {
+      display: block;
+      width: 100%;
+    }
+    
+    #dynamicTable thead,
+    #dynamicTable tbody,
+    #dynamicTable th,
+    #dynamicTable td,
+    #dynamicTable tr {
+      display: block;
+    }
+    
+    #dynamicTable thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    #dynamicTable tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    #dynamicTable td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+    }
+    
+    #dynamicTable td:before {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+      color: #4b70e2;
+    }
+    
+    /* Label the data for mobile view */
+    #dynamicTable td:nth-of-type(1):before { content: "ID"; }
+    #dynamicTable td:nth-of-type(2):before { content: "Employer"; }
+    #dynamicTable td:nth-of-type(3):before { content: "Role"; }
+    #dynamicTable td:nth-of-type(4):before { content: "Actions"; }
+  }
+  
+  /* Container to make the table responsive */
+  .table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow-x: auto;
+  }
+  
+  /* Page title styling */
+  .page-title {
+    color: #4b70e2;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 600;
+  }
+  
+  /* For FontAwesome compatibility (if available) */
+  .fa-solid {
+    font-size: 18px;
+  }
+
+.BUTTON {
+    padding: 10px 13px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 50px;
+    display: block;
+    margin-left: 830px;
+    border-radius: 8px;
+    background-color:#20B471;
+    color: #fff;
+   
+}
+.BUTTON:hover{
+  background-color: #11633e;
+}
+button{
+  background-color: #20B471;
+  cursor: pointer;
+  padding: 8px 10px;
+  border: none;
+  font-size: 12px;
+  color: #fff;
+  margin-top: -5px;
+  display: block;
+ margin-right: -40px;
+  border-radius: 8px;
+
+}
+
+button:hover {
+    background-color:red;
+   
+}
+
+
+
+/* General Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+    padding-top: 1px; /* Space from the top of the screen */
+  }
+  form{
+    margin-top: 40px;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #ffffff;
+    margin: 5% auto; /* Center the modal */
+    padding: 20px;
+    border-radius: 8px;
+    width: 45%;
+    max-width: 350px;
+  }
+  
+  /* Close Button */
+  .closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .closeBtn:hover,
+  .closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Form Heading */
+   .modal-content h2 {
+    text-align: center;
+    color: #2C5EAA;
+   margin-top: 20px;
+    font-size: 17px;
+  }
+  .modal-content h2 span{
+    color: #147b4d;
+    font-size: 25px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  
+  /* Input Box Styles */
+  .input-box {
+    position: relative;
+    margin-bottom: 13px;
+    background-color: #ffffff;
+  
+  }
+  
+  .input-box input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  outline: none;}
+
+  
+  
+  
+  .input-box input:focus {
+    border-color: #007BFF;
+    outline: none;
+    background-color: #fff;
+  }
+
+  .input-box select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    outline: none;}
+
+
+  .input-box label {
+    display: block;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  
+  /* Icons inside input fields */
+  .input-box i {
+    
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #888;
+  }
+  
+  
+  /* Button Styles */
+  .buttonn {
+    background-color:  #20B471;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    display: block;
+    margin-top: 24px;
+    margin-left: 14px;
+  }
+  
+  .buttonn:hover {
+    background-color: #11633e;
+  }
+  
+  /* Responsive Design: Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+  
+    .input-box input {
+        font-size: 14px;
+    }
+  
+    .buttonn {
+        font-size: 14px;
+    }
+  }
+  
+  
+    
+   
+
+
+

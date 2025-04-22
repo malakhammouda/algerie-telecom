@@ -1,0 +1,23 @@
+[
+    {   
+        "nom":"fibre blida",
+        "etat":"terminé",
+        "entreprise":"SPA"
+    },
+    {   
+         "nom":"fibre SOMAA",
+         "etat":"terminé",
+         "entreprise":"SPA COMINTAL"
+    },
+    {   
+         "nom":"fibre OULAD YAICH",
+         "etat":"terminé",
+         "entreprise":"EMS"
+    },
+    {   
+         "nom":"fibre bLIDA2",
+         "etat":"terminé",
+         "entreprise":"SPA SATICOM"
+    }
+    
+]
